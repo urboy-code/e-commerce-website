@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- Css On my Own -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery -->
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/Other/logo.png" alt="logo monyet" style="width: 30px; height: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Buku Tamu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <i class="bi bi-cart4 shoppingCartButton"></i>
+                        <h6 id="sum-prices"></h6>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="productsOnCart hide">
+            <div class="overlay"></div>
+            <div class="top">
+                <button id="closeButton">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
+                <h3>Cart</h3>
+            </div>
+            <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+                <!-- <li class="buyItem">
+                <img src="img/producs-images/shirt/1.png" alt="baju">
+                <div>
+                    <h5>Products Name</h5>
+                    <h6>Rp999</h6>
+                    <div>
+                        <button class = "button-minus" data-id='1'>-</button>
+                        <span class="countofProduct">1</span>
+                        <button class = "button-plus" data-id='1'>+</button>
+                    </div>
+                </div>
+            </li> -->
+            </ul>
+            <button class="btn checkout hidden">Check Out</button>
+        </div>
+    </nav>
+    <!-- End Navbar Section -->
+
+    <!-- Jumbotron Section -->
+    <section class="jumbotron text-center">
+        <h1 class="display-4">Eka Store</h1>
+        <img src="img/Other/logo.png" alt="logo" class="rounded-circle img-thumbnail"
+            style="height: 80px; width: 80px;">
+        <p class="lead">SHIRT | WATCH | SHOES</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,96L80,80C160,64,320,32,480,64C640,96,800,192,960,197.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- End Jumbotron Section -->
+
+    <!-- Poduct Section -->
+    <section id="products">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2>Our Prodcuts</h2>
+                </div>
+            </div>
+            <!-- Wacth Section -->
+            <div class="product">
+                <div class="row justify-content-lg-center product-under">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/watch/1.png" class="card-img-top" alt="product1">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Jam Omega</h5>
+                                <p class="card-text priceValue">Rp 500</p>
+                                <button class="btn btn-primary addToCart" data-product-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/watch/2.png" class="card-img-top" alt="product2">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Jam Seiko</h5>
+                                <p class="card-text priceValue">Rp. 1.300.000</p>
+                                <button class="btn btn-primary addToCart" data-product-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/watch/3.png" class="card-img-top" alt="product3">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Jam Black Rolex</h5>
+                                <p class="card-text priceValue">Rp. 800.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shirt Section -->
+                <div class="row justify-content-lg-center product-under">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shirt/1.png" class="card-img-top" alt="Kemeja kondangan">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Kemeja Kondangan</h5>
+                                <p class="card-text priceValue">Rp 150.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="1">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shirt/2.png" class="card-img-top" alt="crewneck 705">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Crewneck 705</h5>
+                                <p class="card-text">Rp. 500.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="2">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shirt/3.png" class="card-img-top" alt="kaos 705">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Kaos 705</h5>
+                                <p class="card-text priceValue">Rp. 100.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shoes Section -->
+                <div class="row justify-content-lg-center product-under">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shoes/1.png" class="card-img-top" alt="nike grey">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Nike Grey</h5>
+                                <p class="card-text priceValue">Rp 400.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="1">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shoes/2.png" class="card-img-top" alt="No Brand Red Shoes">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">No Brand Red Shoes</h5>
+                                <p class="card-text priceValue">Rp. 500.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="2">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="img/producs-images/shoes/3.png" class="card-img-top" alt="Convers red">
+                            <div class="card-body">
+                                <h5 class="card-title product-name">Convers Red</h5>
+                                <p class="card-text priceValue">Rp. 800.000</p>
+                                <a class="btn btn-primary addToCart" data-product-id="3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#e2edff" fill-opacity="1"
+                d="M0,96L80,80C160,64,320,32,480,64C640,96,800,192,960,197.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- End Poduct Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col">
+                    <h2>Buku Tamu</h2>
+                </div>
+            </div>
+            <div class="row justify-content-lg-center">
+                <div class="col-md-6">
+                    <div class="alert alert-success alert-dismissible fade show d-none myAlert" role="alert">
+                        Pesan Terkirim!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="buku-tamu">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                            <label for="pesan" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0dcaf0" fill-opacity="1"
+                d="M0,96L80,80C160,64,320,32,480,64C640,96,800,192,960,197.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer Section -->
+    <footer class="bg-info text-white text-center pb-5">
+        <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="http://www.instagram.com/ekaleon/"
+                class="text-white fw-bold">Eka Leon</a></p>
+    </footer>
+    <!-- End Footer Section -->
+
+
+    <script src="shop.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbxf5fjsJZ2S2moLKwUEHGt3lUT2_JFtneIkzT-QQ5-AFnZrgj-l6ZKbuo5LzBISaXxDNg/exec'
+        const form = document.forms['buku-tamu'];
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoadng = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.myAlert');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            // Ketika tombol submit diclick
+            // Selama belum success, tampilkan tombol loading lalu hilangkan tombol kirim
+
+            btnLoadng.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    // Ketika success, tampilkan tombol kirim lalu hilangkan tombol loading
+                    btnLoadng.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    myAlert.classList.toggle('d-none');
+                    // reset form
+                    form.reset();
+                    console.log('Success!', response);
+                    
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
